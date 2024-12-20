@@ -25,8 +25,15 @@ SECRET_KEY = "django-insecure-zzk=ov!1czm^=*bl976+w%i=dgt2ly1hz8uvugs6)%^u2+on=a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    ".railway.app" #https://sass.prod.railway.app
+]
 
+if DEBUG:
+    ALLOWED_HOSTS += [
+        "localhost",
+        "127.0.0.1",
+    ]
 
 # Application definition
 
@@ -119,6 +126,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_BASE_DIR = BASE_DIR / "staticfiles"
+STATIC_VENDORS_DIR = STATIC_BASE_DIR / "vendors"
+
+# sourece for python manage.py collectstatic
+
+STATICFILES_DIRS = [    
+    STATIC_BASE_DIR,
+]
+
+
+# output for python manage.py collectstatic
+# local cdn
+STATIC_ROOT = BASE_DIR.parent / "local-cdn"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

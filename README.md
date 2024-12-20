@@ -18,26 +18,47 @@ pip install -r requirements.txt
 
 # create django project
 
+```
 django-admin startproject core .
-
+``
 # run server
-
+``
 python manage.py runserver
+```
 
 # create django views
 
+```
 views.py
 
 add to urls.py
+```
 
 # create new app
 
+```
 pytnon manage.py startapp visits
+```
 
 # make migrations
 
+```
 python manage.py makemigrations
+```
 
 # maigrate
 
+```
 python manage.py migrate
+```
+
+# python collect statis files
+
+```
+python manage.py collectstatic
+```
+
+# framewor tailwincss
+
+flowbite
+https://flowbite.com/docs/getting-started/quickstart/

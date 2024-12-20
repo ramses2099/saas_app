@@ -169,3 +169,10 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# ignore vendors static files
+src/staticfiles/vendors
+
+# ignore local static files
+# local-cdn
+local-cdn/
