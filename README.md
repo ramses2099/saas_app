@@ -62,3 +62,9 @@ python manage.py collectstatic
 
 flowbite
 https://flowbite.com/docs/getting-started/quickstart/
+
+# create commando app for dowload static files
+
+```
+python .\manage.py startapp commando
+```
